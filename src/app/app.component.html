@@ -1,0 +1,13 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <span id="heading">Address Book</span>
+</div>
+<div class="content" role="main">
+  <app-table />
+  <div>
+    <app-dialog *ngIf="dialogService.showDialog"></app-dialog>
+  </div>
+</div>
+
+<app-toast />
+<router-outlet></router-outlet>

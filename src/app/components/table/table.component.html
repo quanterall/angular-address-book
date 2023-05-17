@@ -1,0 +1,25 @@
+<div class="card table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let instrument of instruments; let i = index">
+        <td class="align-middle" scope="row">{{ i + 1 }}</td>
+        <td class="align-middle" scope="row">{{ instrument.name }}</td>
+        <td scope="row">
+          <button
+            class="btn btn-outline-success"
+            (click)="openDialog(instrument)"
+          >
+            Invite
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
